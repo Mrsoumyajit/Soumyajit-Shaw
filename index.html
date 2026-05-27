@@ -1,0 +1,1244 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Soumyajit Shaw - Aspiring Software Developer | Java, JavaScript, Python, Android Developer portfolio showcasing projects and skills." />
+  <meta name="keywords" content="Soumyajit Shaw, Software Developer, Java Developer, Android Developer, Portfolio, India" />
+  <meta name="author" content="Soumyajit Shaw" />
+  <meta property="og:title" content="Soumyajit Shaw | Aspiring Software Developer" />
+  <meta property="og:description" content="Building efficient and scalable solutions through code." />
+  <meta property="og:type" content="website" />
+  <title>Soumyajit Shaw | Aspiring Software Developer</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+
+  <!-- Devicons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <!-- EmailJS -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ══════════ PRELOADER ══════════ -->
+  <div id="preloader">
+    <div class="preloader-inner">
+      <div class="preloader-logo">
+        <span class="logo-s">S</span><span class="logo-dot">.</span>
+      </div>
+      <div class="preloader-bar"><div class="preloader-fill"></div></div>
+      <p class="preloader-text">Initializing Experience...</p>
+    </div>
+  </div>
+
+  <!-- ══════════ CUSTOM CURSOR ══════════ -->
+  <div id="cursor-dot"></div>
+  <div id="cursor-ring"></div>
+  <div id="cursor-trail-container"></div>
+
+  <!-- ══════════ SCROLL PROGRESS BAR ══════════ -->
+  <div id="scroll-progress"></div>
+
+  <!-- ══════════ PARTICLE CANVAS ══════════ -->
+  <canvas id="particle-canvas"></canvas>
+
+  <!-- ══════════ MOUSE GLOW ══════════ -->
+  <div id="mouse-glow"></div>
+
+  <!-- ══════════ NAVBAR ══════════ -->
+  <nav id="navbar">
+    <div class="nav-container">
+      <a href="#home" class="nav-logo" aria-label="Home">
+        <span class="logo-text">Soumyajit<span class="logo-accent">.</span></span>
+      </a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#home" class="nav-link active" data-section="home">Home</a></li>
+        <li><a href="#about" class="nav-link" data-section="about">About</a></li>
+        <li><a href="#skills" class="nav-link" data-section="skills">Skills</a></li>
+        <li><a href="#projects" class="nav-link" data-section="projects">Projects</a></li>
+        <li><a href="#services" class="nav-link" data-section="services">Services</a></li>
+        <li><a href="#education" class="nav-link" data-section="education">Education</a></li>
+        <li><a href="#achievements" class="nav-link" data-section="achievements">Achievements</a></li>
+        <li><a href="#contact" class="nav-link" data-section="contact">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button id="theme-toggle" class="theme-btn" aria-label="Toggle theme">
+          <i class="fas fa-sun sun-icon"></i>
+          <i class="fas fa-moon moon-icon"></i>
+        </button>
+        <a href="#contact" class="nav-cta magnetic-btn">Hire Me</a>
+        <button id="hamburger" class="hamburger" aria-label="Menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ══════════ HERO SECTION ══════════ -->
+  <section id="home" class="hero-section">
+    <!-- Animated Grid Background -->
+    <div class="hero-grid"></div>
+    <!-- Animated blobs -->
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    <div class="blob blob-3"></div>
+
+    <div class="hero-container">
+      <div class="hero-content" data-aos="fade-up">
+        <!-- Status Badge -->
+        <div class="status-badge">
+          <span class="status-dot"></span>
+          <span>Available for Opportunities</span>
+        </div>
+
+        <!-- Greeting -->
+        <p class="hero-greeting">Hello, I'm</p>
+
+        <!-- Name -->
+        <h1 class="hero-name">
+          <span class="name-line">Soumyajit</span>
+          <span class="name-line gradient-text">Shaw</span>
+        </h1>
+
+        <!-- Typing Animation -->
+        <div class="hero-title-wrap">
+          <span class="hero-title-static">I'm a </span>
+          <span class="typed-text" id="typed-text"></span>
+          <span class="typed-cursor">|</span>
+        </div>
+
+        <!-- Tagline -->
+        <p class="hero-tagline">
+          Building <span class="highlight">efficient</span> and <span class="highlight">scalable</span> solutions through code.
+        </p>
+
+        <!-- Hero Buttons -->
+        <div class="hero-buttons">
+          <a href="#projects" class="btn btn-primary magnetic-btn">
+            <i class="fas fa-rocket"></i>
+            <span>View Projects</span>
+            <div class="btn-shimmer"></div>
+          </a>
+          <a href="#contact" class="btn btn-secondary magnetic-btn">
+            <i class="fas fa-briefcase"></i>
+            <span>Hire Me</span>
+          </a>
+          <a href="#" class="btn btn-outline magnetic-btn" id="resume-btn" download>
+            <i class="fas fa-download"></i>
+            <span>Resume</span>
+          </a>
+          <a href="#contact" class="btn btn-ghost magnetic-btn">
+            <i class="fas fa-envelope"></i>
+            <span>Contact</span>
+          </a>
+        </div>
+
+        <!-- Social Links -->
+        <div class="hero-socials">
+          <a href="https://github.com/" target="_blank" rel="noopener" class="social-link" aria-label="GitHub">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="https://linkedin.com/" target="_blank" rel="noopener" class="social-link" aria-label="LinkedIn">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+          <a href="mailto:your-email@example.com" class="social-link" aria-label="Email">
+            <i class="fas fa-envelope"></i>
+          </a>
+          <a href="tel:+918653029590" class="social-link" aria-label="Phone">
+            <i class="fas fa-phone"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Hero Illustration -->
+      <div class="hero-visual">
+        <div class="hero-avatar-wrap">
+          <div class="avatar-ring ring-1"></div>
+          <div class="avatar-ring ring-2"></div>
+          <div class="avatar-ring ring-3"></div>
+          <div class="avatar-core">
+            <div class="avatar-initials">SS</div>
+            <div class="avatar-glow"></div>
+          </div>
+          <!-- Floating tech icons -->
+          <div class="floating-icon fi-java" title="Java"><i class="devicon-java-plain colored"></i></div>
+          <div class="floating-icon fi-js" title="JavaScript"><i class="devicon-javascript-plain colored"></i></div>
+          <div class="floating-icon fi-python" title="Python"><i class="devicon-python-plain colored"></i></div>
+          <div class="floating-icon fi-android" title="Android"><i class="devicon-android-plain colored"></i></div>
+          <div class="floating-icon fi-html" title="HTML5"><i class="devicon-html5-plain colored"></i></div>
+          <div class="floating-icon fi-css" title="CSS3"><i class="devicon-css3-plain colored"></i></div>
+          <div class="floating-icon fi-php" title="PHP"><i class="devicon-php-plain colored"></i></div>
+          <div class="floating-icon fi-sql" title="SQL"><i class="devicon-mysql-plain colored"></i></div>
+        </div>
+
+        <!-- Code snippet floating card -->
+        <div class="hero-code-card glass-card">
+          <div class="code-card-header">
+            <span class="dot red"></span>
+            <span class="dot yellow"></span>
+            <span class="dot green"></span>
+            <span class="code-filename">Developer.java</span>
+          </div>
+          <pre class="code-snippet"><code><span class="c-kw">public class</span> <span class="c-cl">Developer</span> {
+  <span class="c-kw">String</span> name = <span class="c-str">"Soumyajit Shaw"</span>;
+  <span class="c-kw">String</span> role = <span class="c-str">"Software Dev"</span>;
+  <span class="c-kw">boolean</span> passionate = <span class="c-bool">true</span>;
+
+  <span class="c-kw">void</span> <span class="c-fn">code</span>() {
+    <span class="c-fn">solve</span>(problems);
+    <span class="c-fn">build</span>(solutions);
+  }
+}</code></pre>
+        </div>
+
+        <!-- Stats mini card -->
+        <div class="hero-stats-card glass-card">
+          <div class="stat-item"><span class="stat-num" data-count="9">0</span><span class="stat-label">Skills</span></div>
+          <div class="stat-divider"></div>
+          <div class="stat-item"><span class="stat-num" data-count="5">0</span><span class="stat-label">Projects</span></div>
+          <div class="stat-divider"></div>
+          <div class="stat-item"><span class="stat-num" data-count="2">0</span><span class="stat-label">Years</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scroll indicator -->
+    <div class="scroll-indicator">
+      <div class="scroll-mouse">
+        <div class="scroll-wheel"></div>
+      </div>
+      <span>Scroll to explore</span>
+    </div>
+
+    <!-- Wave separator -->
+    <div class="wave-separator">
+      <svg viewBox="0 0 1440 80" preserveAspectRatio="none">
+        <path d="M0,40 C360,80 1080,0 1440,40 L1440,80 L0,80 Z" fill="var(--bg-secondary)"/>
+      </svg>
+    </div>
+  </section>
+
+  <!-- ══════════ STATS SECTION ══════════ -->
+  <section class="stats-section">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-card glass-card" data-aos="fade-up" data-aos-delay="0">
+          <div class="stat-icon"><i class="fas fa-code"></i></div>
+          <div class="stat-number" data-count="5">0</div>
+          <div class="stat-title">Projects Built</div>
+        </div>
+        <div class="stat-card glass-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="stat-icon"><i class="fas fa-layer-group"></i></div>
+          <div class="stat-number" data-count="9">0</div>
+          <div class="stat-title">Technologies</div>
+        </div>
+        <div class="stat-card glass-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="stat-icon"><i class="fas fa-bug"></i></div>
+          <div class="stat-number" data-count="500">0</div>
+          <div class="stat-title">Problems Solved</div>
+        </div>
+        <div class="stat-card glass-card" data-aos="fade-up" data-aos-delay="300">
+          <div class="stat-icon"><i class="fas fa-coffee"></i></div>
+          <div class="stat-number" data-count="1200">0</div>
+          <div class="stat-title">Hours Coded</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ ABOUT SECTION ══════════ -->
+  <section id="about" class="about-section section">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-tag">About Me</span>
+        <h2 class="section-title">Who I <span class="gradient-text">Am</span></h2>
+        <p class="section-subtitle">Passionate developer on a journey to build impactful software</p>
+      </div>
+
+      <div class="about-grid">
+        <!-- About Visual -->
+        <div class="about-visual" data-aos="fade-right">
+          <div class="about-image-wrap">
+            <div class="about-avatar">
+              <div class="about-initials">SS</div>
+              <div class="about-avatar-glow"></div>
+              <div class="about-orbit">
+                <div class="orbit-item oi-1"><i class="devicon-java-plain"></i></div>
+                <div class="orbit-item oi-2"><i class="devicon-javascript-plain"></i></div>
+                <div class="orbit-item oi-3"><i class="devicon-python-plain"></i></div>
+                <div class="orbit-item oi-4"><i class="devicon-android-plain"></i></div>
+              </div>
+            </div>
+            <div class="about-badge badge-experience glass-card">
+              <i class="fas fa-graduation-cap"></i>
+              <div>
+                <span class="badge-num">2+</span>
+                <span class="badge-label">Years Learning</span>
+              </div>
+            </div>
+            <div class="about-badge badge-projects glass-card">
+              <i class="fas fa-laptop-code"></i>
+              <div>
+                <span class="badge-num">5+</span>
+                <span class="badge-label">Projects Done</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- About Content -->
+        <div class="about-content" data-aos="fade-left">
+          <h3 class="about-title">Aspiring Software Developer from <span class="gradient-text">India</span></h3>
+          <p class="about-text">
+            I'm <strong>Soumyajit Shaw</strong>, a passionate student developer currently pursuing my graduation in India. My journey in software development started with curiosity, and has grown into a deep love for building elegant, efficient, and impactful solutions.
+          </p>
+          <p class="about-text">
+            I specialize in <strong>Java development</strong>, with strong foundations in web technologies, Android development, and problem-solving through Data Structures & Algorithms. My goal is to join a top MNC as a professional software engineer.
+          </p>
+
+          <!-- About traits -->
+          <div class="about-traits">
+            <div class="trait-item glass-card">
+              <i class="fas fa-fire"></i>
+              <div>
+                <h4>Passionate Coder</h4>
+                <p>Love writing clean, efficient code</p>
+              </div>
+            </div>
+            <div class="trait-item glass-card">
+              <i class="fas fa-brain"></i>
+              <div>
+                <h4>Problem Solver</h4>
+                <p>DSA & algorithmic thinking</p>
+              </div>
+            </div>
+            <div class="trait-item glass-card">
+              <i class="fas fa-rocket"></i>
+              <div>
+                <h4>Continuous Learner</h4>
+                <p>Always exploring new technologies</p>
+              </div>
+            </div>
+            <div class="trait-item glass-card">
+              <i class="fas fa-bullseye"></i>
+              <div>
+                <h4>Goal Oriented</h4>
+                <p>Aspiring for MNC software role</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Info Grid -->
+          <div class="about-info-grid">
+            <div class="info-item"><span class="info-label">Name:</span><span class="info-value">Soumyajit Shaw</span></div>
+            <div class="info-item"><span class="info-label">Location:</span><span class="info-value">India</span></div>
+            <div class="info-item"><span class="info-label">Email:</span><span class="info-value">your-email@example.com</span></div>
+            <div class="info-item"><span class="info-label">Phone:</span><span class="info-value">+91 8653-02959</span></div>
+            <div class="info-item"><span class="info-label">Status:</span><span class="info-value available">Available</span></div>
+            <div class="info-item"><span class="info-label">Languages:</span><span class="info-value">English, Bengali, Hindi</span></div>
+          </div>
+
+          <div class="about-cta">
+            <a href="#contact" class="btn btn-primary magnetic-btn">
+              <i class="fas fa-envelope"></i> Get In Touch
+            </a>
+            <a href="#" class="btn btn-outline magnetic-btn" download>
+              <i class="fas fa-download"></i> Download CV
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ SKILLS SECTION ══════════ -->
+  <section id="skills" class="skills-section section">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-tag">Technical Expertise</span>
+        <h2 class="section-title">My <span class="gradient-text">Skills</span></h2>
+        <p class="section-subtitle">Technologies I work with and continuously master</p>
+      </div>
+
+      <!-- Skills Grid -->
+      <div class="skills-grid" data-aos="fade-up">
+        <!-- Programming Languages -->
+        <div class="skill-category">
+          <h3 class="category-title"><i class="fas fa-code"></i> Programming Languages</h3>
+          <div class="skill-cards-row">
+
+            <div class="skill-card glass-card tilt-card" data-aos="zoom-in" data-aos-delay="0">
+              <div class="skill-icon-wrap"><i class="devicon-java-plain colored"></i></div>
+              <h4>Java</h4>
+              <div class="skill-level">
+                <div class="skill-bar"><div class="skill-fill" data-width="90"></div></div>
+                <span class="skill-percent">90%</span>
+              </div>
+              <div class="skill-badge">Primary</div>
+            </div>
+
+            <div class="skill-card glass-card tilt-card" data-aos="zoom-in" data-aos-delay="80">
+              <div class="skill-icon-wrap"><i class="devicon-javascript-plain colored"></i></div>
+              <h4>JavaScript</h4>
+              <div class="skill-level">
+                <div class="skill-bar"><div class="skill-fill" data-width="75"></div></div>
+                <span class="skill-percent">75%</span>
+              </div>
+              <div class="skill-badge">Proficient</div>
+            </div>
+
+            <div class="skill-card glass-card tilt-card" data-aos="zoom-in" data-aos-delay="160">
+              <div class="skill-icon-wrap"><i class="devicon-python-plain colored"></i></div>
+              <h4>Python</h4>
+              <div class="skill-level">
+                <div class="skill-bar"><div class="skill-fill" data-width="70"></div></div>
+                <span class="skill-percent">70%</span>
+              </div>
+              <div class="skill-badge">Intermediate</div>
+            </div>
+
+            <div class="skill-card glass-card tilt-card" data-aos="zoom-in" data-aos-delay="240">
+              <div class="skill-icon-wrap"><i class="devicon-php-plain colored"></i></div>
+              <h4>PHP</h4>
+              <div class="skill-level">
+                <div class="skill-bar"><div class="skill-fill" data-width="65"></div></div>
+                <span class="skill-percent">65%</span>
+              </div>
+              <div class="skill-badge">Intermediate</div>
+            </div>
+
+            <div class="skill-card glass-card tilt-card" data-aos="zoom-in" data-aos-delay="320">
+              <div class="skill-icon-wrap"><i class="devicon-mysql-plain colored"></i></div>
+              <h4>SQL</h4>
+              <div class="skill-level">
+                <div class="skill-bar"><div class="skill-fill" data-width="72"></div></div>
+                <span class="skill-percent">72%</span>
+              </div>
+              <div class="skill-badge">Proficient</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Frontend -->
+        <div class="skill-category">
+          <h3 class="category-title"><i class="fas fa-palette"></i> Frontend Technologies</h3>
+          <div class="skill-cards-row">
+            <div class="skill-card glass-card tilt-card" data-aos="zoom-in" data-aos-delay="0">
+              <div class="skill-icon-wrap"><i class="devicon-html5-plain colored"></i></div>
+              <h4>HTML5</h4>
+              <div class="skill-level">
+                <div class="skill-bar"><div class="skill-fill" data-width="88"></div></div>
+                <span class="skill-percent">88%</span>
+              </div>
+              <div class="skill-badge">Advanced</div>
+            </div>
+
+            <div class="skill-card glass-card tilt-card" data-aos="zoom-in" data-aos-delay="80">
+              <div class="skill-icon-wrap"><i class="devicon-css3-plain colored"></i></div>
+              <h4>CSS3</h4>
+              <div class="skill-level">
+                <div class="skill-bar"><div class="skill-fill" data-width="82"></div></div>
+                <span class="skill-percent">82%</span>
+              </div>
+              <div class="skill-badge">Advanced</div>
+            </div>
+
+            <div class="skill-card glass-card tilt-card" data-aos="zoom-in" data-aos-delay="160">
+              <div class="skill-icon-wrap"><i class="devicon-android-plain colored"></i></div>
+              <h4>Android Dev</h4>
+              <div class="skill-level">
+                <div class="skill-bar"><div class="skill-fill" data-width="68"></div></div>
+                <span class="skill-percent">68%</span>
+              </div>
+              <div class="skill-badge">Intermediate</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Core Skills -->
+        <div class="skill-category">
+          <h3 class="category-title"><i class="fas fa-brain"></i> Core Fundamentals</h3>
+          <div class="skill-cards-row">
+            <div class="skill-card glass-card tilt-card dsa-card" data-aos="zoom-in">
+              <div class="skill-icon-wrap dsa-icon"><i class="fas fa-sitemap"></i></div>
+              <h4>Data Structures & Algorithms</h4>
+              <div class="skill-level">
+                <div class="skill-bar"><div class="skill-fill" data-width="78"></div></div>
+                <span class="skill-percent">78%</span>
+              </div>
+              <div class="skill-badge">Proficient</div>
+            </div>
+            <div class="skill-card glass-card tilt-card dsa-card" data-aos="zoom-in" data-aos-delay="80">
+              <div class="skill-icon-wrap dsa-icon"><i class="fas fa-puzzle-piece"></i></div>
+              <h4>Problem Solving</h4>
+              <div class="skill-level">
+                <div class="skill-bar"><div class="skill-fill" data-width="85"></div></div>
+                <span class="skill-percent">85%</span>
+              </div>
+              <div class="skill-badge">Advanced</div>
+            </div>
+            <div class="skill-card glass-card tilt-card dsa-card" data-aos="zoom-in" data-aos-delay="160">
+              <div class="skill-icon-wrap dsa-icon"><i class="fas fa-lightbulb"></i></div>
+              <h4>Logical Thinking</h4>
+              <div class="skill-level">
+                <div class="skill-bar"><div class="skill-fill" data-width="88"></div></div>
+                <span class="skill-percent">88%</span>
+              </div>
+              <div class="skill-badge">Advanced</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tech Stack Carousel -->
+      <div class="tech-carousel-wrap" data-aos="fade-up">
+        <h3 class="carousel-title">Tech Stack</h3>
+        <div class="tech-carousel">
+          <div class="tech-track">
+            <div class="tech-item"><i class="devicon-java-plain colored"></i><span>Java</span></div>
+            <div class="tech-item"><i class="devicon-javascript-plain colored"></i><span>JS</span></div>
+            <div class="tech-item"><i class="devicon-python-plain colored"></i><span>Python</span></div>
+            <div class="tech-item"><i class="devicon-html5-plain colored"></i><span>HTML5</span></div>
+            <div class="tech-item"><i class="devicon-css3-plain colored"></i><span>CSS3</span></div>
+            <div class="tech-item"><i class="devicon-php-plain colored"></i><span>PHP</span></div>
+            <div class="tech-item"><i class="devicon-mysql-plain colored"></i><span>MySQL</span></div>
+            <div class="tech-item"><i class="devicon-android-plain colored"></i><span>Android</span></div>
+            <div class="tech-item"><i class="devicon-git-plain colored"></i><span>Git</span></div>
+            <div class="tech-item"><i class="devicon-github-original"></i><span>GitHub</span></div>
+            <!-- Duplicate for infinite scroll -->
+            <div class="tech-item"><i class="devicon-java-plain colored"></i><span>Java</span></div>
+            <div class="tech-item"><i class="devicon-javascript-plain colored"></i><span>JS</span></div>
+            <div class="tech-item"><i class="devicon-python-plain colored"></i><span>Python</span></div>
+            <div class="tech-item"><i class="devicon-html5-plain colored"></i><span>HTML5</span></div>
+            <div class="tech-item"><i class="devicon-css3-plain colored"></i><span>CSS3</span></div>
+            <div class="tech-item"><i class="devicon-php-plain colored"></i><span>PHP</span></div>
+            <div class="tech-item"><i class="devicon-mysql-plain colored"></i><span>MySQL</span></div>
+            <div class="tech-item"><i class="devicon-android-plain colored"></i><span>Android</span></div>
+            <div class="tech-item"><i class="devicon-git-plain colored"></i><span>Git</span></div>
+            <div class="tech-item"><i class="devicon-github-original"></i><span>GitHub</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ PROJECTS SECTION ══════════ -->
+  <section id="projects" class="projects-section section">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-tag">My Work</span>
+        <h2 class="section-title">Featured <span class="gradient-text">Projects</span></h2>
+        <p class="section-subtitle">Crafted with passion, built with precision</p>
+      </div>
+
+      <!-- Filter Tabs -->
+      <div class="project-filters" data-aos="fade-up">
+        <button class="filter-btn active" data-filter="all">All Projects</button>
+        <button class="filter-btn" data-filter="app">Applications</button>
+        <button class="filter-btn" data-filter="web">Web</button>
+        <button class="filter-btn" data-filter="utility">Utility</button>
+      </div>
+
+      <div class="projects-grid">
+
+        <!-- Project 1: Expense Tracker -->
+        <div class="project-card glass-card tilt-card" data-category="app" data-aos="fade-up" data-aos-delay="0">
+          <div class="project-image">
+            <div class="project-img-placeholder pi-expense">
+              <i class="fas fa-wallet"></i>
+            </div>
+            <div class="project-overlay">
+              <button class="preview-btn" onclick="openModal('expense')" aria-label="Preview">
+                <i class="fas fa-eye"></i> Preview
+              </button>
+            </div>
+          </div>
+          <div class="project-glow-border"></div>
+          <div class="project-content">
+            <div class="project-number">01</div>
+            <h3 class="project-title">Expense Tracker App</h3>
+            <p class="project-desc">A comprehensive Android application for tracking daily expenses, managing budgets, and visualizing spending patterns with intuitive charts and reports.</p>
+            <div class="project-tech">
+              <span class="tech-tag">Java</span>
+              <span class="tech-tag">Android</span>
+              <span class="tech-tag">SQLite</span>
+              <span class="tech-tag">XML</span>
+            </div>
+            <div class="project-features">
+              <span><i class="fas fa-check"></i> Budget Management</span>
+              <span><i class="fas fa-check"></i> Visual Charts</span>
+              <span><i class="fas fa-check"></i> Category Tracking</span>
+            </div>
+            <div class="project-links">
+              <a href="#" class="proj-btn github-btn" target="_blank" aria-label="GitHub">
+                <i class="fab fa-github"></i> GitHub
+              </a>
+              <a href="#" class="proj-btn demo-btn" target="_blank" aria-label="Live Demo">
+                <i class="fas fa-external-link-alt"></i> Demo
+              </a>
+              <button class="proj-btn contact-btn" onclick="openModal('contact-project')">
+                <i class="fas fa-code"></i> Source
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 2: Udhar Management -->
+        <div class="project-card glass-card tilt-card featured-project" data-category="app" data-aos="fade-up" data-aos-delay="100">
+          <div class="project-featured-badge">Featured</div>
+          <div class="project-image">
+            <div class="project-img-placeholder pi-udhar">
+              <i class="fas fa-hand-holding-usd"></i>
+            </div>
+            <div class="project-overlay">
+              <button class="preview-btn" onclick="openModal('udhar')" aria-label="Preview">
+                <i class="fas fa-eye"></i> Preview
+              </button>
+            </div>
+          </div>
+          <div class="project-glow-border"></div>
+          <div class="project-content">
+            <div class="project-number">02</div>
+            <h3 class="project-title">Udhar Management System</h3>
+            <p class="project-desc">A full-featured credit/debit management system for tracking money lent and borrowed, with real-time balance calculations and transaction history.</p>
+            <div class="project-tech">
+              <span class="tech-tag">Java</span>
+              <span class="tech-tag">Android</span>
+              <span class="tech-tag">SQLite</span>
+              <span class="tech-tag">Firebase</span>
+            </div>
+            <div class="project-features">
+              <span><i class="fas fa-check"></i> Real-time Sync</span>
+              <span><i class="fas fa-check"></i> Transaction History</span>
+              <span><i class="fas fa-check"></i> Smart Reminders</span>
+            </div>
+            <div class="project-links">
+              <a href="#" class="proj-btn github-btn" target="_blank" aria-label="GitHub">
+                <i class="fab fa-github"></i> GitHub
+              </a>
+              <a href="#" class="proj-btn demo-btn" target="_blank" aria-label="Live Demo">
+                <i class="fas fa-external-link-alt"></i> Demo
+              </a>
+              <button class="proj-btn contact-btn" onclick="openModal('contact-project')">
+                <i class="fas fa-code"></i> Source
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 3: Calculator -->
+        <div class="project-card glass-card tilt-card" data-category="utility" data-aos="fade-up" data-aos-delay="200">
+          <div class="project-image">
+            <div class="project-img-placeholder pi-calc">
+              <i class="fas fa-calculator"></i>
+            </div>
+            <div class="project-overlay">
+              <button class="preview-btn" onclick="openModal('calc')" aria-label="Preview">
+                <i class="fas fa-eye"></i> Preview
+              </button>
+            </div>
+          </div>
+          <div class="project-glow-border"></div>
+          <div class="project-content">
+            <div class="project-number">03</div>
+            <h3 class="project-title">Calculator App</h3>
+            <p class="project-desc">A sleek, feature-rich calculator with standard and scientific modes, history tracking, and an elegant modern UI built for precision.</p>
+            <div class="project-tech">
+              <span class="tech-tag">Java</span>
+              <span class="tech-tag">Android</span>
+              <span class="tech-tag">XML</span>
+            </div>
+            <div class="project-features">
+              <span><i class="fas fa-check"></i> Scientific Mode</span>
+              <span><i class="fas fa-check"></i> History Log</span>
+              <span><i class="fas fa-check"></i> Clean UI</span>
+            </div>
+            <div class="project-links">
+              <a href="#" class="proj-btn github-btn" target="_blank" aria-label="GitHub">
+                <i class="fab fa-github"></i> GitHub
+              </a>
+              <a href="#" class="proj-btn demo-btn" target="_blank" aria-label="Live Demo">
+                <i class="fas fa-external-link-alt"></i> Demo
+              </a>
+              <button class="proj-btn contact-btn" onclick="openModal('contact-project')">
+                <i class="fas fa-code"></i> Source
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 4: To-Do List -->
+        <div class="project-card glass-card tilt-card" data-category="utility" data-aos="fade-up" data-aos-delay="300">
+          <div class="project-image">
+            <div class="project-img-placeholder pi-todo">
+              <i class="fas fa-tasks"></i>
+            </div>
+            <div class="project-overlay">
+              <button class="preview-btn" onclick="openModal('todo')" aria-label="Preview">
+                <i class="fas fa-eye"></i> Preview
+              </button>
+            </div>
+          </div>
+          <div class="project-glow-border"></div>
+          <div class="project-content">
+            <div class="project-number">04</div>
+            <h3 class="project-title">To-Do List App</h3>
+            <p class="project-desc">A productivity powerhouse with task categories, priority levels, due dates, reminders, and a beautiful gesture-based interface.</p>
+            <div class="project-tech">
+              <span class="tech-tag">JavaScript</span>
+              <span class="tech-tag">HTML5</span>
+              <span class="tech-tag">CSS3</span>
+              <span class="tech-tag">LocalStorage</span>
+            </div>
+            <div class="project-features">
+              <span><i class="fas fa-check"></i> Priority Levels</span>
+              <span><i class="fas fa-check"></i> Due Dates</span>
+              <span><i class="fas fa-check"></i> Drag & Drop</span>
+            </div>
+            <div class="project-links">
+              <a href="#" class="proj-btn github-btn" target="_blank" aria-label="GitHub">
+                <i class="fab fa-github"></i> GitHub
+              </a>
+              <a href="#" class="proj-btn demo-btn" target="_blank" aria-label="Live Demo">
+                <i class="fas fa-external-link-alt"></i> Demo
+              </a>
+              <button class="proj-btn contact-btn" onclick="openModal('contact-project')">
+                <i class="fas fa-code"></i> Source
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 5: Portfolio -->
+        <div class="project-card glass-card tilt-card" data-category="web" data-aos="fade-up" data-aos-delay="400">
+          <div class="project-image">
+            <div class="project-img-placeholder pi-portfolio">
+              <i class="fas fa-user-tie"></i>
+            </div>
+            <div class="project-overlay">
+              <button class="preview-btn" onclick="openModal('portfolio')" aria-label="Preview">
+                <i class="fas fa-eye"></i> Preview
+              </button>
+            </div>
+          </div>
+          <div class="project-glow-border"></div>
+          <div class="project-content">
+            <div class="project-number">05</div>
+            <h3 class="project-title">Portfolio Website</h3>
+            <p class="project-desc">This ultra-premium personal portfolio website featuring glassmorphism, 3D effects, particle animations, and cinematic scroll interactions.</p>
+            <div class="project-tech">
+              <span class="tech-tag">HTML5</span>
+              <span class="tech-tag">CSS3</span>
+              <span class="tech-tag">JavaScript</span>
+            </div>
+            <div class="project-features">
+              <span><i class="fas fa-check"></i> 3D Effects</span>
+              <span><i class="fas fa-check"></i> Animations</span>
+              <span><i class="fas fa-check"></i> Responsive</span>
+            </div>
+            <div class="project-links">
+              <a href="#" class="proj-btn github-btn" target="_blank" aria-label="GitHub">
+                <i class="fab fa-github"></i> GitHub
+              </a>
+              <a href="#" class="proj-btn demo-btn" target="_blank" aria-label="Live Demo">
+                <i class="fas fa-external-link-alt"></i> Live
+              </a>
+              <button class="proj-btn contact-btn" onclick="openModal('contact-project')">
+                <i class="fas fa-code"></i> Source
+              </button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- GitHub CTA -->
+      <div class="github-cta" data-aos="fade-up">
+        <p>Want to see more of my work?</p>
+        <a href="https://github.com/" target="_blank" class="btn btn-primary magnetic-btn">
+          <i class="fab fa-github"></i> Visit My GitHub
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ SERVICES SECTION ══════════ -->
+  <section id="services" class="services-section section">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-tag">What I Offer</span>
+        <h2 class="section-title">My <span class="gradient-text">Services</span></h2>
+        <p class="section-subtitle">Turning ideas into elegant digital solutions</p>
+      </div>
+
+      <div class="services-grid">
+        <div class="service-card glass-card tilt-card" data-aos="fade-up" data-aos-delay="0">
+          <div class="service-icon-wrap">
+            <div class="service-icon"><i class="fab fa-android"></i></div>
+          </div>
+          <h3>Android Development</h3>
+          <p>Building native Android apps with intuitive UX, clean architecture, and smooth performance using Java & Android SDK.</p>
+          <ul class="service-features">
+            <li><i class="fas fa-check-circle"></i> Native Android Apps</li>
+            <li><i class="fas fa-check-circle"></i> Material Design UI</li>
+            <li><i class="fas fa-check-circle"></i> SQLite / Firebase</li>
+          </ul>
+          <div class="service-tag">Mobile</div>
+        </div>
+
+        <div class="service-card glass-card tilt-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="service-icon-wrap">
+            <div class="service-icon"><i class="fas fa-globe"></i></div>
+          </div>
+          <h3>Web Development</h3>
+          <p>Creating responsive, visually stunning websites and web applications using modern HTML5, CSS3, and JavaScript.</p>
+          <ul class="service-features">
+            <li><i class="fas fa-check-circle"></i> Responsive Design</li>
+            <li><i class="fas fa-check-circle"></i> Modern Animations</li>
+            <li><i class="fas fa-check-circle"></i> Cross-Browser Compatible</li>
+          </ul>
+          <div class="service-tag">Web</div>
+        </div>
+
+        <div class="service-card glass-card tilt-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="service-icon-wrap">
+            <div class="service-icon"><i class="fas fa-database"></i></div>
+          </div>
+          <h3>Backend & Databases</h3>
+          <p>Designing efficient database schemas, writing optimized SQL queries, and building backend logic with Java & PHP.</p>
+          <ul class="service-features">
+            <li><i class="fas fa-check-circle"></i> MySQL / SQLite</li>
+            <li><i class="fas fa-check-circle"></i> Java Backend</li>
+            <li><i class="fas fa-check-circle"></i> PHP Server-side</li>
+          </ul>
+          <div class="service-tag">Backend</div>
+        </div>
+
+        <div class="service-card glass-card tilt-card" data-aos="fade-up" data-aos-delay="300">
+          <div class="service-icon-wrap">
+            <div class="service-icon"><i class="fas fa-sitemap"></i></div>
+          </div>
+          <h3>DSA & Problem Solving</h3>
+          <p>Solving complex algorithmic challenges with optimal time & space complexity using Java and Python.</p>
+          <ul class="service-features">
+            <li><i class="fas fa-check-circle"></i> Data Structures</li>
+            <li><i class="fas fa-check-circle"></i> Algorithms</li>
+            <li><i class="fas fa-check-circle"></i> Competitive Coding</li>
+          </ul>
+          <div class="service-tag">Logic</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ EDUCATION SECTION ══════════ -->
+  <section id="education" class="education-section section">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-tag">My Journey</span>
+        <h2 class="section-title">Education & <span class="gradient-text">Timeline</span></h2>
+        <p class="section-subtitle">The academic path that shaped my developer mindset</p>
+      </div>
+
+      <div class="timeline">
+        <div class="timeline-line"></div>
+
+        <div class="timeline-item" data-aos="fade-right">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content glass-card">
+            <div class="timeline-date">2022 – Present</div>
+            <div class="timeline-icon"><i class="fas fa-graduation-cap"></i></div>
+            <h3>Bachelor's Degree</h3>
+            <p class="timeline-institution">Currently Pursuing Graduation · India</p>
+            <p class="timeline-desc">Pursuing a Bachelor's degree with focus on computer science fundamentals, software engineering principles, and practical development skills.</p>
+            <div class="timeline-tags">
+              <span>Computer Science</span>
+              <span>Software Engineering</span>
+              <span>DSA</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item right" data-aos="fade-left">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content glass-card">
+            <div class="timeline-date">2020 – 2022</div>
+            <div class="timeline-icon"><i class="fas fa-school"></i></div>
+            <h3>Higher Secondary (12th)</h3>
+            <p class="timeline-institution">Science Stream · West Bengal Board</p>
+            <p class="timeline-desc">Completed Higher Secondary education with Science stream, building analytical and mathematical foundations for computer science.</p>
+            <div class="timeline-tags">
+              <span>Science</span>
+              <span>Mathematics</span>
+              <span>Physics</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item" data-aos="fade-right">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content glass-card">
+            <div class="timeline-date">2020</div>
+            <div class="timeline-icon"><i class="fas fa-star"></i></div>
+            <h3>Secondary (10th)</h3>
+            <p class="timeline-institution">West Bengal Board of Secondary Education</p>
+            <p class="timeline-desc">Completed secondary education with distinction, demonstrating early aptitude for science and logical reasoning.</p>
+            <div class="timeline-tags">
+              <span>WBBSE</span>
+              <span>Science</span>
+              <span>Mathematics</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item right" data-aos="fade-left">
+          <div class="timeline-dot active"></div>
+          <div class="timeline-content glass-card active-card">
+            <div class="timeline-date">Ongoing</div>
+            <div class="timeline-icon active-icon"><i class="fas fa-code"></i></div>
+            <h3>Self-Learning & Development</h3>
+            <p class="timeline-institution">Online Platforms & Personal Projects</p>
+            <p class="timeline-desc">Continuously expanding skills through online courses, personal projects, and building real-world applications.</p>
+            <div class="timeline-tags">
+              <span>Java</span>
+              <span>Android</span>
+              <span>Web Dev</span>
+              <span>DSA</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ ACHIEVEMENTS SECTION ══════════ -->
+  <section id="achievements" class="achievements-section section">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-tag">My Milestones</span>
+        <h2 class="section-title">Achievements & <span class="gradient-text">Certificates</span></h2>
+        <p class="section-subtitle">Recognition and milestones along the journey</p>
+      </div>
+
+      <div class="achievements-grid">
+        <div class="achievement-card glass-card" data-aos="zoom-in" data-aos-delay="0">
+          <div class="achievement-icon"><i class="fas fa-trophy"></i></div>
+          <h3>Java Programming</h3>
+          <p>Certified in Core Java Programming covering OOP, Collections, Exception Handling, and Multithreading.</p>
+          <div class="achievement-badge">Certificate</div>
+        </div>
+        <div class="achievement-card glass-card" data-aos="zoom-in" data-aos-delay="100">
+          <div class="achievement-icon"><i class="fas fa-medal"></i></div>
+          <h3>Android Development</h3>
+          <p>Completed Android App Development training covering UI design, activities, fragments, and database integration.</p>
+          <div class="achievement-badge">Certificate</div>
+        </div>
+        <div class="achievement-card glass-card" data-aos="zoom-in" data-aos-delay="200">
+          <div class="achievement-icon"><i class="fas fa-award"></i></div>
+          <h3>Web Development</h3>
+          <p>Completed full-stack web development course covering HTML, CSS, JavaScript, PHP, and MySQL.</p>
+          <div class="achievement-badge">Certificate</div>
+        </div>
+        <div class="achievement-card glass-card" data-aos="zoom-in" data-aos-delay="300">
+          <div class="achievement-icon"><i class="fas fa-star"></i></div>
+          <h3>Problem Solving</h3>
+          <p>Solved 500+ coding challenges on competitive programming platforms, strengthening DSA fundamentals.</p>
+          <div class="achievement-badge">Achievement</div>
+        </div>
+        <div class="achievement-card glass-card" data-aos="zoom-in" data-aos-delay="400">
+          <div class="achievement-icon"><i class="fas fa-code-branch"></i></div>
+          <h3>Open Source Contributor</h3>
+          <p>Actively contributing to open-source projects on GitHub, collaborating with the developer community.</p>
+          <div class="achievement-badge">Achievement</div>
+        </div>
+        <div class="achievement-card glass-card" data-aos="zoom-in" data-aos-delay="500">
+          <div class="achievement-icon"><i class="fas fa-laptop-code"></i></div>
+          <h3>5 Projects Deployed</h3>
+          <p>Successfully built and deployed 5 complete projects spanning Android, web, and utility applications.</p>
+          <div class="achievement-badge">Milestone</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ TESTIMONIALS SECTION ══════════ -->
+  <section class="testimonials-section section">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-tag">What People Say</span>
+        <h2 class="section-title">Testimonials & <span class="gradient-text">Reviews</span></h2>
+      </div>
+      <div class="testimonials-slider" data-aos="fade-up">
+        <div class="testimonial-track" id="testimonial-track">
+          <div class="testimonial-card glass-card">
+            <div class="testimonial-quote"><i class="fas fa-quote-left"></i></div>
+            <p class="testimonial-text">"Soumyajit is a highly dedicated developer with impressive problem-solving skills. His ability to learn quickly and deliver quality code is remarkable."</p>
+            <div class="testimonial-author">
+              <div class="author-avatar">MK</div>
+              <div>
+                <h4>Mentor K.</h4>
+                <span>Senior Developer</span>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card glass-card">
+            <div class="testimonial-quote"><i class="fas fa-quote-left"></i></div>
+            <p class="testimonial-text">"An exceptional talent! Soumyajit built a clean, functional Android app for our project. His attention to detail and passion for coding really stands out."</p>
+            <div class="testimonial-author">
+              <div class="author-avatar">AR</div>
+              <div>
+                <h4>Arjun R.</h4>
+                <span>Project Collaborator</span>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card glass-card">
+            <div class="testimonial-quote"><i class="fas fa-quote-left"></i></div>
+            <p class="testimonial-text">"I was impressed by Soumyajit's methodical approach to problem solving. He breaks down complex problems efficiently and finds optimal solutions."</p>
+            <div class="testimonial-author">
+              <div class="author-avatar">PB</div>
+              <div>
+                <h4>Prof. Biswas</h4>
+                <span>Academic Mentor</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-controls">
+          <button class="testi-btn prev-btn" id="prev-testi" aria-label="Previous"><i class="fas fa-chevron-left"></i></button>
+          <div class="testi-dots" id="testi-dots">
+            <span class="testi-dot active"></span>
+            <span class="testi-dot"></span>
+            <span class="testi-dot"></span>
+          </div>
+          <button class="testi-btn next-btn" id="next-testi" aria-label="Next"><i class="fas fa-chevron-right"></i></button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ CONTACT SECTION ══════════ -->
+  <section id="contact" class="contact-section section">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-tag">Get In Touch</span>
+        <h2 class="section-title">Contact <span class="gradient-text">Me</span></h2>
+        <p class="section-subtitle">Have a project in mind or want to hire me? Let's talk!</p>
+      </div>
+
+      <div class="contact-grid">
+        <!-- Contact Info -->
+        <div class="contact-info" data-aos="fade-right">
+          <div class="contact-info-card glass-card">
+            <h3>Let's Work Together</h3>
+            <p>I'm open to new opportunities, exciting projects, and collaborations. Whether it's a job offer, freelance project, or just a conversation, don't hesitate to reach out.</p>
+
+            <div class="contact-details">
+              <a href="tel:+918653029590" class="contact-detail-item">
+                <div class="contact-icon"><i class="fas fa-phone"></i></div>
+                <div>
+                  <span class="contact-label">Phone</span>
+                  <span class="contact-value">+91 8653-02959</span>
+                </div>
+              </a>
+              <a href="mailto:your-email@example.com" class="contact-detail-item">
+                <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                <div>
+                  <span class="contact-label">Email</span>
+                  <span class="contact-value">your-email@example.com</span>
+                </div>
+              </a>
+              <div class="contact-detail-item">
+                <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+                <div>
+                  <span class="contact-label">Location</span>
+                  <span class="contact-value">India</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="contact-socials">
+              <a href="https://github.com/" target="_blank" class="social-btn" aria-label="GitHub">
+                <i class="fab fa-github"></i>
+              </a>
+              <a href="https://linkedin.com/" target="_blank" class="social-btn" aria-label="LinkedIn">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+              <a href="mailto:your-email@example.com" class="social-btn" aria-label="Email">
+                <i class="fas fa-envelope"></i>
+              </a>
+              <a href="https://twitter.com/" target="_blank" class="social-btn" aria-label="Twitter">
+                <i class="fab fa-twitter"></i>
+              </a>
+            </div>
+
+            <!-- AI Assistant Widget -->
+            <div class="ai-widget glass-card">
+              <div class="ai-widget-header">
+                <div class="ai-avatar"><i class="fas fa-robot"></i></div>
+                <div>
+                  <h4>AI Assistant</h4>
+                  <span class="ai-status"><span class="ai-dot"></span> Online</span>
+                </div>
+              </div>
+              <div class="ai-wave">
+                <span></span><span></span><span></span><span></span><span></span>
+                <span></span><span></span><span></span><span></span><span></span>
+              </div>
+              <p class="ai-message">"Hi! I'm Soumyajit's AI assistant. He typically responds within 24 hours. Send him a message below!"</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="contact-form-wrap" data-aos="fade-left">
+          <div class="contact-form-card glass-card">
+            <h3>Send a Message</h3>
+
+            <form id="contact-form" novalidate>
+              <!-- Honeypot anti-spam -->
+              <input type="text" name="honeypot" id="honeypot" style="display:none;" tabindex="-1" autocomplete="off" />
+
+              <div class="form-row">
+                <div class="form-group">
+                  <div class="input-wrap">
+                    <input type="text" id="contact-name" name="from_name" required minlength="2" autocomplete="name" />
+                    <label for="contact-name">Full Name <span class="required">*</span></label>
+                    <div class="input-line"></div>
+                    <i class="fas fa-user input-icon"></i>
+                  </div>
+                  <span class="field-error" id="name-error"></span>
+                </div>
+                <div class="form-group">
+                  <div class="input-wrap">
+                    <input type="email" id="contact-email" name="from_email" required autocomplete="email" />
+                    <label for="contact-email">Email Address <span class="required">*</span></label>
+                    <div class="input-line"></div>
+                    <i class="fas fa-envelope input-icon"></i>
+                  </div>
+                  <span class="field-error" id="email-error"></span>
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <div class="input-wrap">
+                    <input type="tel" id="contact-phone" name="phone" autocomplete="tel" />
+                    <label for="contact-phone">Phone Number</label>
+                    <div class="input-line"></div>
+                    <i class="fas fa-phone input-icon"></i>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <div class="input-wrap">
+                    <input type="text" id="contact-subject" name="subject" required minlength="3" />
+                    <label for="contact-subject">Subject <span class="required">*</span></label>
+                    <div class="input-line"></div>
+                    <i class="fas fa-tag input-icon"></i>
+                  </div>
+                  <span class="field-error" id="subject-error"></span>
+                </div>
+              </div>
+
+              <div class="form-group full-width">
+                <div class="input-wrap textarea-wrap">
+                  <textarea id="contact-message" name="message" required minlength="10" rows="5"></textarea>
+                  <label for="contact-message">Your Message <span class="required">*</span></label>
+                  <div class="input-line"></div>
+                  <i class="fas fa-comment input-icon"></i>
+                </div>
+                <span class="field-error" id="message-error"></span>
+              </div>
+
+              <button type="submit" class="btn btn-primary submit-btn magnetic-btn" id="submit-btn">
+                <span class="btn-text"><i class="fas fa-paper-plane"></i> Send Message</span>
+                <span class="btn-loading" style="display:none;"><i class="fas fa-spinner fa-spin"></i> Sending...</span>
+                <div class="btn-shimmer"></div>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ FOOTER ══════════ -->
+  <footer class="footer">
+    <div class="footer-wave">
+      <svg viewBox="0 0 1440 60" preserveAspectRatio="none">
+        <path d="M0,30 C360,60 1080,0 1440,30 L1440,0 L0,0 Z" fill="var(--bg-primary)"/>
+      </svg>
+    </div>
+    <div class="footer-container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="#home" class="footer-logo">Soumyajit<span>.</span></a>
+          <p>Aspiring Software Developer | Building tomorrow's solutions today.</p>
+          <div class="footer-socials">
+            <a href="https://github.com/" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            <a href="https://linkedin.com/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="mailto:your-email@example.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+          </div>
+        </div>
+        <div class="footer-links-col">
+          <h4>Navigation</h4>
+          <a href="#home">Home</a>
+          <a href="#about">About</a>
+          <a href="#skills">Skills</a>
+          <a href="#projects">Projects</a>
+          <a href="#contact">Contact</a>
+        </div>
+        <div class="footer-links-col">
+          <h4>Connect</h4>
+          <a href="https://github.com/" target="_blank">GitHub</a>
+          <a href="https://linkedin.com/" target="_blank">LinkedIn</a>
+          <a href="mailto:your-email@example.com">Email Me</a>
+          <a href="tel:+918653029590">Call Me</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Soumyajit Shaw. Crafted with <i class="fas fa-heart" style="color:#f43f5e;"></i> & <i class="fas fa-coffee" style="color:#f59e0b;"></i> | All rights reserved.</p>
+        <p>Made in <span class="india">India 🇮🇳</span></p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ══════════ BACK TO TOP ══════════ -->
+  <button id="back-to-top" class="back-to-top" aria-label="Back to top">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+
+  <!-- ══════════ PROJECT MODAL ══════════ -->
+  <div id="project-modal" class="modal-overlay" role="dialog" aria-modal="true">
+    <div class="modal-container glass-card">
+      <button class="modal-close" id="modal-close" aria-label="Close">
+        <i class="fas fa-times"></i>
+      </button>
+      <div class="modal-content" id="modal-content"></div>
+    </div>
+  </div>
+
+  <!-- ══════════ SUCCESS TOAST ══════════ -->
+  <div id="toast" class="toast" role="alert" aria-live="polite">
+    <div class="toast-icon success"><i class="fas fa-check-circle"></i></div>
+    <div class="toast-body">
+      <h4 id="toast-title">Message Sent!</h4>
+      <p id="toast-msg">I'll get back to you soon.</p>
+    </div>
+    <button class="toast-close" onclick="closeToast()" aria-label="Close toast"><i class="fas fa-times"></i></button>
+  </div>
+
+  <!-- Main Script -->
+  <script src="script.js"></script>
+</body>
+</html>
